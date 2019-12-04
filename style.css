@@ -1,0 +1,106 @@
+* {
+   
+    font-family: "Monospace";
+
+}
+
+body {
+    background-image: url("pom.jpg");
+    background-repeat: repeat;
+}
+#pom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+#title {
+    
+    margin-top: 10%;
+    justify-content: center;
+    
+}
+
+#set {
+    
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+#timer {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#time {
+    font-size: 40px;
+    border: 2px solid black;
+}
+
+#mode {
+    font-size: 50px;
+}
+
+#buttons, #timerBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.setting {
+    text-align: center;
+}
+
+.container {
+    background-color: #e6000f;
+    color: black;
+    margin-top: 25px;
+    width: 500px;
+    display: flex;
+    border-radius: 10px;   
+}
+
+.button {
+    background-color: #6e001b;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 30px;
+    border: solid;
+    border-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brick {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=text] {
+    background-color: #6e001b;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 30px;
+    border: solid;
+    border-color: black;
+    text-align: center;
+}
+
+
+
