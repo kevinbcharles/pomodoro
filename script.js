@@ -26,6 +26,7 @@ function stPause() {
 
 function rstart() {
     pauseClock();
+    mode = "WORK";
     initClock(workTime);
 }
 
