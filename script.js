@@ -8,14 +8,18 @@ var status = "stop";
 var mode = "WORK";
 var time = new Date(null);
 var intervalId = 0;
-var meow = new Audio('meow.mp3');
-var moo = new Audio('moo.mp3');
+const soundEffect = new Audio();
+var audioActive = false
 
 function formatTime(val) {
     return time.toISOString().substr(14,5); // trim date to just show minutes and seconds
 }
 
 function stPause() {
+    if (audioActive == false) {
+        soundEffect.play();
+        audioActive = true;
+    }
     if(status == "stop"){
         initClock(workTime);
         startClock();
@@ -51,12 +55,14 @@ function clockTick() {
         if (mode == "WORK") {
             initClock(breakTime);
             mode = "BREAK";
-            meow.play();
+            soundEffect.src = "meow.mp3";
+            soundEffect.play();
             startClock();
         }else {
             initClock(workTime);
             mode = "WORK";
-            moo.play();
+            soundEffect.src = "moo.mp3";
+            soundEffect.play();
             startClock();
         }
 
