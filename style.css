@@ -1,7 +1,5 @@
 * {
-   
     font-family: "Monospace";
-
 }
 
 body {
@@ -21,7 +19,6 @@ body {
     
     margin-top: 10%;
     justify-content: center;
-    
 }
 
 #set {
@@ -29,7 +26,6 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 
 #timer {
@@ -46,6 +42,7 @@ body {
 
 #mode {
     font-size: 50px;
+    height: 60px;
 }
 
 #buttons, #timerBox {
