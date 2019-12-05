@@ -8,6 +8,8 @@ var status = "stop";
 var mode = "WORK";
 var time = new Date(null);
 var intervalId = 0;
+var meow = new Audio('meow.mp3');
+var moo = new Audio('moo.mp3');
 
 function formatTime(val) {
     return time.toISOString().substr(14,5); // trim date to just show minutes and seconds
@@ -38,9 +40,9 @@ function initClock(val) {
 
 function startClock() {
     startButton.textContent = "PAUSE";
-    intervalId = setInterval(clockTick, 1000);
     status = "running";
     modeText.textContent = mode;
+    intervalId = setInterval(clockTick, 1000);
 }
 
 function clockTick() {
@@ -49,10 +51,12 @@ function clockTick() {
         if (mode == "WORK") {
             initClock(breakTime);
             mode = "BREAK";
+            meow.play();
             startClock();
         }else {
             initClock(workTime);
             mode = "WORK";
+            moo.play();
             startClock();
         }
 
@@ -64,8 +68,8 @@ function clockTick() {
 
 function pauseClock() {
     status = "paused";
-    clearInterval(intervalId);
     startButton.textContent = "RESUME";
+    clearInterval(intervalId);
 }
 
 
